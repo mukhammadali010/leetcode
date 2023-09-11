@@ -87,3 +87,23 @@
 //     console.log( c);
 // };
 // addBinary('111', 1011)
+
+
+// 8 
+
+
+var climbStairs = function(n) {
+    let sum = 0;
+    let res = 0
+    for(let i = 0; i <= n; i++){
+        sum = i
+
+        if(n == sum ){
+            res = sum + i - 2
+        }
+    }
+
+    console.log(res);
+};
+
+console.log(climbStairs(8));
