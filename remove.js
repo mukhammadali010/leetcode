@@ -76,7 +76,6 @@
 
 // console.log(plusOne([1, 2, 3]))
 
-
 // =========================================================
 
 // 7
@@ -88,22 +87,37 @@
 // };
 // addBinary('111', 1011)
 
+// 8
 
-// 8 
+// var climbStairs = function (n) {
+//   if (n <= 2) {
+//     return n;
+//   }
+//   const arr = new Array(n+1);
+  
+//   arr[1] = 1;
+//   arr[2] = 2;
+//   for (let i = 3; i <= n; i++) {
+//     arr[i] = arr[i - 1] + arr[i - 2];
+//   }
+//   return arr[n]
+// };
+
+// console.log(climbStairs(8));
 
 
-var climbStairs = function(n) {
-    let sum = 0;
-    let res = 0
-    for(let i = 0; i <= n; i++){
-        sum = i
+//9
 
-        if(n == sum ){
-            res = sum + i - 2
-        }
-    }
+//=======================================================
 
-    console.log(res);
+var merge = function(nums1, m, nums2, n) {
+   let b = 0;
+   for(let i = m ; i < m+n; i++){
+    nums1[i] = nums2[b]
+    b++
+   }
+   return nums1.sort((a,b)=> a-b)
 };
 
-console.log(climbStairs(8));
+console.log(merge([1,2,3,0,0,0] , 3 , [2,5,6] , 3));
+
