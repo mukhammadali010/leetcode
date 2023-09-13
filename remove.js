@@ -94,7 +94,7 @@
 //     return n;
 //   }
 //   const arr = new Array(n+1);
-  
+
 //   arr[1] = 1;
 //   arr[2] = 2;
 //   for (let i = 3; i <= n; i++) {
@@ -104,7 +104,6 @@
 // };
 
 // console.log(climbStairs(8));
-
 
 //9
 
@@ -121,7 +120,41 @@
 
 // console.log(merge([1,2,3,0,0,0] , 3 , [2,5,6] , 3));
 
-
-// 10 
+// 10
 
 //==========================================================
+
+// var twoSum = function (nums, target) {
+//   let result = [];
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] + nums[i + 1] == target) {
+//       result = [i  , i+1]
+//     }else if(nums[i] + nums[i + 2] == target){
+//       result = [i , i+2]
+//     }
+//     else if(nums[i] + nums[i + 3] == target){
+//       result = [i , i+3]
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(twoSum([3, 2, 3] , 6));
+
+//11
+
+//===============================================================
+
+var shuffle = function (nums, n) {
+  let right = nums.splice(n)
+  let result = [];
+
+  for (let i = 0; i < n; i++) {
+   result.push(nums[i]);
+   result.push(right[i]);
+  }
+  
+  console.log(result);
+
+}
+shuffle([2, 5, 1, 3, 4, 7], 3);
