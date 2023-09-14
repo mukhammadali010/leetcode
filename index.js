@@ -129,23 +129,39 @@
 //   ])
 // );
 
-
-
 //=================================================
 
 // 1431
 
-var kidsWithCandies = function(candies, extraCandies) {
+// var kidsWithCandies = function(candies, extraCandies) {
 
-    let max = Math.max(...candies)
-    let result = []
+//     let max = Math.max(...candies)
+//     let result = []
 
-    for(let i = 0; i < candies.length; i++){
-            result.push(candies[i] + extraCandies >= max)
+//     for(let i = 0; i < candies.length; i++){
+//             result.push(candies[i] + extraCandies >= max)
+//     }
+//     return result
+// };
+// console.log(kidsWithCandies([2,3,5,1,3] , 3));
+
+//===================================================================
+
+//2824
+
+var countPairs = function (nums, target) {
+  let count = 0;
+  let result = [];
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] < target) {
+        result.push(nums[i]);
+        result.push(nums[j]);
+        count++
+      }
     }
-    return result
+  }
+  return count;
+
 };
-console.log(kidsWithCandies([2,3,5,1,3] , 3));
-
-
-
+console.log(countPairs([-1, 1, 2, 3, 1], 2));
