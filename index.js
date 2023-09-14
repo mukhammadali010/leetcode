@@ -104,27 +104,48 @@
 
 // 1672
 
-var maximumWealth = function (accounts) {
-  let array = [];
-  let max = 0;
-  for (let i = 0; i < accounts.length; i++) {
-    const sumOfElements = accounts[i].reduce(
-      (accumulator, currentValue) => accumulator + currentValue,
-      0
-    );
-    array.push(sumOfElements);
-  }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] > max) {
-      max = array[i];
+// var maximumWealth = function (accounts) {
+//   let array = [];
+//   let max = 0;
+//   for (let i = 0; i < accounts.length; i++) {
+//     const sumOfElements = accounts[i].reduce(
+//       (accumulator, currentValue) => accumulator + currentValue,
+//       0
+//     );
+//     array.push(sumOfElements);
+//   }
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] > max) {
+//       max = array[i];
+//     }
+//   }
+//   return max;
+// };
+// console.log(
+//   maximumWealth([
+//     [1, 5],
+//     [7, 3],
+//     [3, 5],
+//   ])
+// );
+
+
+
+//=================================================
+
+// 1431
+
+var kidsWithCandies = function(candies, extraCandies) {
+
+    let max = Math.max(...candies)
+    let result = []
+
+    for(let i = 0; i < candies.length; i++){
+            result.push(candies[i] + extraCandies >= max)
     }
-  }
-  return max;
+    return result
 };
-console.log(
-  maximumWealth([
-    [1, 5],
-    [7, 3],
-    [3, 5],
-  ])
-);
+console.log(kidsWithCandies([2,3,5,1,3] , 3));
+
+
+
