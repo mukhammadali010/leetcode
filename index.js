@@ -223,26 +223,26 @@
 
 //2574
 
-var leftRightDifference = function(nums) {
-    let left = [0]
-    let right = [0]
-    let result = []
-    for(let i = 0; i < nums.length-1; i++){
+// var leftRightDifference = function(nums) {
+//     let left = [0]
+//     let right = [0]
+//     let result = []
+//     for(let i = 0; i < nums.length-1; i++){
        
-        left.push(nums[i] + left.at(-1))
-    }
+//         left.push(nums[i] + left.at(-1))
+//     }
 
-    for(let i = nums.length-1; i > 0; i--){
-        right.unshift(nums[i]+right[0])
-    }
-    for(let i = 0 ; i < left.length; i++){
-        for(let j = 0; j < right.length; j++){
-            if(i == j){
-                let sum = Math.abs(left[i] - right[j])
-                result.push(sum)
-            }
-        }
-    }
-    return result
-};
-leftRightDifference([10,4,8,3])
+//     for(let i = nums.length-1; i > 0; i--){
+//         right.unshift(nums[i]+right[0])
+//     }
+//     for(let i = 0 ; i < left.length; i++){
+//         for(let j = 0; j < right.length; j++){
+//             if(i == j){
+//                 let sum = Math.abs(left[i] - right[j])
+//                 result.push(sum)
+//             }
+//         }
+//     }
+//     return result
+// };
+// leftRightDifference([10,4,8,3])
