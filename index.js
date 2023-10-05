@@ -206,7 +206,6 @@
 
 //2114
 
-
 // var mostWordsFound = function(sentences) {
 //     let max = sentences[0].split(" ").length
 //     for(let i = 1 ; i  < sentences.length; i++){
@@ -228,7 +227,7 @@
 //     let right = [0]
 //     let result = []
 //     for(let i = 0; i < nums.length-1; i++){
-       
+
 //         left.push(nums[i] + left.at(-1))
 //     }
 
@@ -246,3 +245,104 @@
 //     return result
 // };
 // leftRightDifference([10,4,8,3])
+
+// ==================================================
+
+// var createTargetArray = function(nums, index) {
+//     let target = new Array(index.length)
+//     for(let i = 0; i < nums.length; i++){
+//         for(let j = 0 ; j < index.length; j++){
+//             if()
+//             target[i] = nums[i]
+//         }
+//     }
+//     console.log(target);
+// };
+// createTargetArray([0,1,2,3,4], [0,1,2,2,1])
+
+// function decimalToBinary(decimalNumber) {
+//     if (decimalNumber === 0) {
+//       return "0"; // Special case when the input is 0
+//     }
+
+//     let binary = "";
+//     while (decimalNumber > 0) {
+//       binary = (decimalNumber % 2) + binary; // Prepend the remainder to the binary string
+//       decimalNumber = Math.floor(decimalNumber / 2); // Update the quotient for the next iteration
+//     }
+
+//     return binary;
+//   }
+
+//   const decimalNumber = 100;
+//   const binaryNumber = decimalToBinary(decimalNumber);
+//   console.log(binaryNumber); // Output: "1101"
+
+// ================================================================
+
+// let index = 0;
+// let array = [1,2,3,4,5];
+// let targetValue = 0;
+// while (array[index] !== targetValue) {
+//     // Process array[index]
+//     index++;
+// }
+// console.log(index);
+
+// var numberOfSteps = function (num) {
+//     let = count = 0;
+//     while (num >= 1) {
+//        if(num % 2 == 0) {
+//         count++
+//         break;
+//        }
+//        if(num % 2 == 1){
+//         num = num -1;
+//        }
+//        count++
+//     }
+//     return count
+// };
+
+// console.log(numberOfSteps(14));
+
+// var interpret = function(command) {
+//     let text = command.replaceAll('()' , 'o');
+//     let res = '';
+
+//     for(let i = 0 ; i < text.length; i++){
+//         if(text[i] !== '(' && text[i] !== ')')
+//         res +=(text[i])
+//     }
+//     return res
+//  };
+
+//  console.log(interpret('G()()()()(al)'));\
+
+// var restoreString = function(s, indices) {
+//     let res =0;
+//     let str = []
+//     for(let j = 0; j < indices.length; j++){
+//     for(let i = 0; i < s.length; i++){
+//             if (i == indices[j]){
+//                 str.push(s[i])
+
+//             }
+//         }
+//     }
+//     return str.join('')
+// };
+
+// console.log(restoreString("codeleet", [4,5,6,7,0,2,1,3]));
+
+let str = { abc: 1, r: 2, d: 5 };
+
+let arr = Object.keys(str)
+arr.every((value)=>{
+    if(Number(value)){
+       console.log(false);
+    }
+    else{
+        console.log(true);
+    }
+})
