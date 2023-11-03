@@ -335,14 +335,188 @@
 
 // console.log(restoreString("codeleet", [4,5,6,7,0,2,1,3]));
 
-let str = { abc: 1, r: 2, d: 5 };
+// let str = { a: 1, b: 2, c: 5 , $:4};
 
-let arr = Object.keys(str)
-arr.every((value)=>{
-    if(Number(value)){
-       console.log(false);
-    }
-    else{
-        console.log(true);
-    }
-})
+// let arr = Object.keys(str)
+// arr.every((value)=>{
+//     console.log(value);
+//   if(Number(value)){
+//     console.log(false);
+
+//   }
+//   else{
+//     console.log(true)
+//   }
+// })
+
+// var sortSentence = function(s) {
+//     let arr = s.split(' ');
+
+//     let res =''
+
+//     for(let i= 0 ; i < s.length; i++){
+//         if(typeof s[2] !== 'number'){
+//             // console.log(s[i]);
+//             res+=s[2]
+//         }
+//     }
+//     console.log(typeof res);
+
+// };
+// sortSentence('is2 sentence4 This1 a3')
+
+// var maxProductDifference = function (nums) {
+//   let res = [];
+//   let min = []
+//   for (let i = 0; i < nums.length; i++) {
+//     let minValue = Math.min(...nums)
+//     let minIndex = nums.indexOf(minValue)
+//     if(minIndex !== -1){
+//         min.push(nums.splice(minIndex , 1))
+//     }
+
+//     let maxValue = Math.max(...nums)
+//     let maxIndex = nums.indexOf(maxValue)
+//     if(maxIndex !== -1){
+//         res.push(nums.splice(maxIndex , 1))
+//     }
+//     }
+//     res = new Set(res);
+//     min = new Set(min)
+// let num = [...res]
+// let num2 = [...min]
+// let a = num[0]*num[1]
+// let b = num2[0]*num2[1]
+
+// }
+
+// maxProductDifference([4,2,5,9,7,4,8]);
+
+// var maxProduct = function(nums) {
+//     let res = []
+//     for(let i = 0 ; i < nums.length; i++){
+//         let maxValue = Math.max(...nums)
+//         let maxIndex = nums.indexOf(maxValue);
+//         if(nums.length <= 2){
+//             res.push(nums[i])
+//         }
+//         else if(maxIndex !== -1 ){
+//             res.push(...nums.splice(maxIndex , 1))
+
+//         }
+//     }
+//     console.log(res);
+//     let val = (res[0]-1) * (res[1]-1)
+//     console.log(val);
+// };
+// maxProduct([3,7])
+
+// var sortPeople = function(names, heights) {
+//  let res = []
+//  for(let i = 0; i < heights.length; i++){
+//   res.push({name:names[i] , height: heights[i]})
+
+//  }
+//  let nat =  res.sort((a,b)=> b.height - a.height).map((value)=>value.name)
+//  console.log(nat);
+// }
+
+// sortPeople(["Alice","Bob1","Bob2"] , [155,185,150])
+
+// var deleteGreatestValue = function(grid) {
+
+//     let arr= []
+
+//     for(let i = 0; i < grid.length; i++){
+//         grid[i] = grid[i].sort((a,b)=> b - a);
+//     }
+//     console.log(grid);
+
+//     for(let i = 0; i < grid.length; i++){
+//         // let max = grid[i][i]
+//         // for(let j = i + 1 ; j < grid[i].length; j++){
+//         //     console.log("inde",grid[j]);
+//         //     if(max < grid[j][j]){
+//         //         max = grid[j][j]
+
+//         //     }
+//         //     grid[j].shift()
+//         // }
+//         // grid[i].shift()
+//         // arr.push(max)
+//         let arr = []
+//         let max = grid[i][0]
+//         for(let j = 0 ; j < grid[i].length; j++){
+
+//             console.log( 'grid: ', grid[i][j]);
+
+//             if(max < grid[i][j]){
+//                 arr.push(grid[i][j])
+//             }
+//             // console.log(max , 'maax');
+//         }
+//         // arr.push(max)
+//         console.log(arr);
+
+//     }
+
+// };
+
+// deleteGreatestValue([[1,2,4],[3,3,1]])
+
+// function somemethod() {
+//     "use strict"
+//     console.log(counter1); // undefined
+//     var counter1 = 1;
+//     // console.log(counter2); // ReferenceError
+//     let counter2 = 2;
+//   }
+//   somemethod()
+
+// var numberOfSteps = function (num) {
+//   let step = 0;
+//   while (num > 0) {
+//     if (num % 2 != 0) {
+//       num -= 1;
+//       step++;
+//     }
+//     if (num % 2 == 0 && num != 0) {
+//       num = num / 2;
+//       step++;
+//     }
+//   }
+//   return step;
+// };
+// console.log(numberOfSteps(14));
+
+// var sumOfMultiples = function(n) {
+//   let sum = 0
+//   for(let i = 0; i <= n; i++){
+//       if(i % 3 === 0 || i % 5 === 0 || i % 7 === 0){
+
+//         console.log(i , 'iiii');
+//         sum +=i
+//         // console.log(sum);
+//       }
+//   }
+//   return sum 
+// };
+
+// console.log(sumOfMultiples(7));
+
+// var countDigits = function(num) {
+//   let count = 0 
+//   let arr =[]
+//   let str = num.toString()
+//   for(let i = 0; i < str.length; i++){
+//      arr.push(str[i])
+//   }
+
+//   for (const value of arr) {
+//     if(num % value == 0){
+//       count++
+//     }
+//   }
+//   return count
+// };
+// console.log(countDigits(121));
