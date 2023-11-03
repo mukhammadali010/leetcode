@@ -520,3 +520,18 @@
 //   return count
 // };
 // console.log(countDigits(121));
+
+// var differenceOfSum = function(nums) {
+//   let sum = 0
+//   let digit = 0
+//   let sumOfdigit = 0
+//   for(let i = 0; i < nums.length; i++){
+//       sum +=nums[i]
+//       digit += nums[i].toString()
+//   }
+//   for(let i = 0; i < digit.length; i++){
+//     all +=Number(digit[i])
+//   }
+//   return Math.abs(sum - sumOfdigit)
+// };
+// differenceOfSum([1,15,6,3])
