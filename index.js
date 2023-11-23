@@ -499,13 +499,13 @@
 //         // console.log(sum);
 //       }
 //   }
-//   return sum 
+//   return sum
 // };
 
 // console.log(sumOfMultiples(7));
 
 // var countDigits = function(num) {
-//   let count = 0 
+//   let count = 0
 //   let arr =[]
 //   let str = num.toString()
 //   for(let i = 0; i < str.length; i++){
@@ -535,3 +535,106 @@
 //   return Math.abs(sum - sumOfdigit)
 // };
 // differenceOfSum([1,15,6,3])
+
+// var arrayPairSum = function(nums) {
+//     nums.sort((a, b) => a - b)
+//     let sum = 0;
+//     for (let i = 0; i < nums.length; i += 2) {
+//         console.log(nums[i], ' iii');
+//         sum += nums[i]
+//     }
+
+//     return sum;
+// }
+// console.log(arrayPairSum([6,2,6,5,1,2 , 7]));
+
+// var sumOddLengthSubarrays = function(arr) {
+//     let sum =0 ;
+//     let count = 0;
+//     let stop = arr.length - 2
+//     for(let i = count; i < arr.length-stop; i++){
+//         sum +=arr[i]
+//         count ++
+//         stop++
+//     }
+//     console.log('sum', sum)
+// };
+
+// sumOddLengthSubarrays([1,4,2,5,3])
+
+// var restoreString = function(s, indices) {
+//    let len = s.length;
+
+//    let res = new Array(len);
+//    for(let i =0; i < len; i++){
+//     res[indices[i]] = s[i]
+//    }
+//    console.log(res.join(''));
+// };
+
+// restoreString("codeleet", [4,5,6,7,0,2,1,3])
+
+// var countMatches = function (items, ruleKey, ruleValue) {
+//   let count = 0;
+//   for (let i = 0; i < items.length; i++) {
+//     if (ruleKey === "name" && ruleValue === items[i][2]) {
+//         count++
+//     }
+//     else if (ruleKey === "color" && ruleValue === items[i][1]) {
+//         count++
+//     }
+//     else if (ruleKey === "type" && ruleValue === items[i][0]) {
+//         count++
+//     }
+//   }
+//   console.log(count);
+// };
+// countMatches(
+//   [
+//     ["phone", "blue", "pixel"],
+//     ["computer", "silver", "phone"],
+//     ["phone", "gold", "iphone"],
+//   ],
+//   (ruleKey = "type"),
+//   (ruleValue = "phone")
+// );
+
+
+// var similarPairs = function(words) {
+//   let arr = []
+//   let set = new Set()
+
+//   for(let i = 0; i < words.length; i++){
+    
+//     arr.push(...new Set(words[i]))
+//   }
+//   console.log(arr);
+
+//   console.log(arr[0] == arr[1]);
+// }
+// similarPairs(["aba","aabb","abcd","bac","aabc"])
+
+
+// var sumOddLengthSubarrays = function(arr) {
+
+//   let sum =0 ; 
+//   for(let i =0 ; i < arr.length; i++){
+//     let currSumm = 0;
+//     for(let j =i; j < arr.length; j++){
+//       currSumm +=arr[j]
+//       if((j-i+1) % 2 === 1){
+//         sum +=currSumm
+//       }
+//     }
+//   }
+//   console.log(sum);
+// }
+// sumOddLengthSubarrays([1,4,2,5,3])
+
+
+var threeSum = function(nums) {
+    for(let i = 0; i < nums.length; i+=3){
+      
+    }
+};
+threeSum([-1,0,1,2,-1,-4])
