@@ -632,9 +632,22 @@
 // sumOddLengthSubarrays([1,4,2,5,3])
 
 
-var threeSum = function(nums) {
-    for(let i = 0; i < nums.length; i+=3){
+// var threeSum = function(nums) {
+//     for(let i = 0; i < nums.length; i+=3){
       
+//     }
+// };
+// threeSum([-1,0,1,2,-1,-4])
+
+var reverseWords = function(s) {
+
+    let arr = s.split(' ')
+    let res = []
+    for(let i = 0; i < arr.length; i++){
+        res.push(arr[i].split('').reverse().join(''))
     }
+    console.log(res.join());
+
+
 };
-threeSum([-1,0,1,2,-1,-4])
+reverseWords("Let's take LeetCode contest")
