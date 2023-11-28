@@ -639,15 +639,83 @@
 // };
 // threeSum([-1,0,1,2,-1,-4])
 
-var reverseWords = function(s) {
+// var reverseWords = function(s) {
 
-    let arr = s.split(' ')
-    let res = []
-    for(let i = 0; i < arr.length; i++){
-        res.push(arr[i].split('').reverse().join(''))
+//     let arr = s.split(' ')
+//     let res = []
+//     for(let i = 0; i < arr.length; i++){
+//         res.push(arr[i].split('').reverse().join(''))
+//     }
+//     console.log(res.join());
+
+
+// };
+// reverseWords("Let's take LeetCode contest")
+
+
+// var uniqueMorseRepresentations = function(words) {
+//     const morseCode = {
+//   'a': '.-', 'b': '-...', 'c': '-.-.', 'd': '-..', 'e': '.', 'f': '..-.', 'g': '--.', 'h': '....', 'i': '..', 'j': '.---',
+//   'k': '-.-', 'l': '.-..', 'm': '--', 'n': '-.', 'o': '---', 'p': '.--.', 'q': '--.-', 'r': '.-.', 's': '...', 't': '-',
+//   'u': '..-', 'v': '...-', 'w': '.--', 'x': '-..-', 'y': '-.--', 'z': '--..'
+// };
+
+// function textToMorse(text) {
+//     return text.toLowerCase().split('').map(char => {
+//       if (char !== ' ') {
+//         return morseCode[char] || ''; // Return Morse code for the character or an empty string if not found
+//       }
+     
+//     }).join(''); // Join Morse codes with spaces
+//   }
+
+//   let res =0;
+//   let count =0;
+//   let arr= []
+//   for(let i = 0; i < words.length; i++){
+//       const inputText = words[i];
+//       const morseResult = textToMorse(inputText);
+//       console.log(morseResult);
+//     arr.push(morseResult)
+// }
+
+// if (arr.length < 2) {
+    
+//     return res++
+//   }
+// for(let i =0; i < arr.length; i++){
+//     let cur = arr[i]
+//     for(let j = count; j < arr.length; j++){
+//         comp = arr[j]
+//         if(i !== j){
+//             if(cur === comp){
+//                 res++ 
+                
+//             }
+//         }
+//     }
+//     count++
+// }
+// console.log(res);
+
+// };
+
+// uniqueMorseRepresentations(["rwjje","aittjje","auyyn","lqtktn","lmjwn"])
+
+
+var findWordsContaining = function(words, x) {
+  let count =0;
+  let arr = new Set()
+  for(let i = count; i < words.length; i++){
+    for(let j = 0; j < words[i].length; j++){
+      if(words[i][j].includes(x)){
+        arr.add(i)
+      }
     }
-    console.log(res.join());
+    
+  }
 
-
+  console.log([...arr]);
+  
 };
-reverseWords("Let's take LeetCode contest")
+findWordsContaining(["leet","code"], x = "e")
