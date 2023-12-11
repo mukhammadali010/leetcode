@@ -703,19 +703,42 @@
 // uniqueMorseRepresentations(["rwjje","aittjje","auyyn","lqtktn","lmjwn"])
 
 
-var findWordsContaining = function(words, x) {
-  let count =0;
-  let arr = new Set()
-  for(let i = count; i < words.length; i++){
-    for(let j = 0; j < words[i].length; j++){
-      if(words[i][j].includes(x)){
-        arr.add(i)
-      }
-    }
+// var findWordsContaining = function(words, x) {
+//   let count =0;
+//   let arr = new Set()
+//   for(let i = count; i < words.length; i++){
+//     for(let j = 0; j < words[i].length; j++){
+//       if(words[i][j].includes(x)){
+//         arr.add(i)
+//       }
+//     }
     
-  }
+//   }
 
-  console.log([...arr]);
+//   console.log([...arr]);
   
+// };
+// findWordsContaining(["leet","code"], x = "e")
+
+// var finalString = function(s) {
+//     for(let i = 0; i < s.length; i++){
+//       console.log(s[i]);
+//       if(s[i] =='i'){
+//         console.log(i);
+//       }
+//     }
+// };
+
+// finalString("string")
+
+var firstPalindrome = function(words) {
+  for(let i = 0; i < words.length; i++){
+      if(words[i] === words[i].split('').reverse().join('')){
+          return words[i]
+      }
+      else if(words[i] === words[i].split('').reverse().join('')){
+        return ''
+      }
+  }
 };
-findWordsContaining(["leet","code"], x = "e")
+console.log(firstPalindrome(["abc","car","ada","racecar","cool"]));
