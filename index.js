@@ -731,14 +731,25 @@
 
 // finalString("string")
 
-var firstPalindrome = function(words) {
+// var firstPalindrome = function(words) {
+//   for(let i = 0; i < words.length; i++){
+//       if(words[i] === words[i].split('').reverse().join('')){
+//           return words[i]
+//       }
+//       else if(words[i] === words[i].split('').reverse().join('')){
+//         return ''
+//       }
+//   }
+// };
+// console.log(firstPalindrome(["abc","car","ada","racecar","cool"]));
+
+var isAcronym = function(words, s) {
+  let res = []
   for(let i = 0; i < words.length; i++){
-      if(words[i] === words[i].split('').reverse().join('')){
-          return words[i]
-      }
-      else if(words[i] === words[i].split('').reverse().join('')){
-        return ''
-      }
+
+
+      res.push(words[i][0])
   }
+  return res.join('') == s
 };
-console.log(firstPalindrome(["abc","car","ada","racecar","cool"]));
+console.log(isAcronym(["alice","bob","charlie"] , "abc"));
