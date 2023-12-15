@@ -599,13 +599,12 @@
 //   (ruleValue = "phone")
 // );
 
-
 // var similarPairs = function(words) {
 //   let arr = []
 //   let set = new Set()
 
 //   for(let i = 0; i < words.length; i++){
-    
+
 //     arr.push(...new Set(words[i]))
 //   }
 //   console.log(arr);
@@ -614,10 +613,9 @@
 // }
 // similarPairs(["aba","aabb","abcd","bac","aabc"])
 
-
 // var sumOddLengthSubarrays = function(arr) {
 
-//   let sum =0 ; 
+//   let sum =0 ;
 //   for(let i =0 ; i < arr.length; i++){
 //     let currSumm = 0;
 //     for(let j =i; j < arr.length; j++){
@@ -631,10 +629,9 @@
 // }
 // sumOddLengthSubarrays([1,4,2,5,3])
 
-
 // var threeSum = function(nums) {
 //     for(let i = 0; i < nums.length; i+=3){
-      
+
 //     }
 // };
 // threeSum([-1,0,1,2,-1,-4])
@@ -648,10 +645,8 @@
 //     }
 //     console.log(res.join());
 
-
 // };
 // reverseWords("Let's take LeetCode contest")
-
 
 // var uniqueMorseRepresentations = function(words) {
 //     const morseCode = {
@@ -665,7 +660,7 @@
 //       if (char !== ' ') {
 //         return morseCode[char] || ''; // Return Morse code for the character or an empty string if not found
 //       }
-     
+
 //     }).join(''); // Join Morse codes with spaces
 //   }
 
@@ -680,7 +675,7 @@
 // }
 
 // if (arr.length < 2) {
-    
+
 //     return res++
 //   }
 // for(let i =0; i < arr.length; i++){
@@ -689,8 +684,8 @@
 //         comp = arr[j]
 //         if(i !== j){
 //             if(cur === comp){
-//                 res++ 
-                
+//                 res++
+
 //             }
 //         }
 //     }
@@ -702,7 +697,6 @@
 
 // uniqueMorseRepresentations(["rwjje","aittjje","auyyn","lqtktn","lmjwn"])
 
-
 // var findWordsContaining = function(words, x) {
 //   let count =0;
 //   let arr = new Set()
@@ -712,11 +706,11 @@
 //         arr.add(i)
 //       }
 //     }
-    
+
 //   }
 
 //   console.log([...arr]);
-  
+
 // };
 // findWordsContaining(["leet","code"], x = "e")
 
@@ -743,13 +737,28 @@
 // };
 // console.log(firstPalindrome(["abc","car","ada","racecar","cool"]));
 
-var isAcronym = function(words, s) {
-  let res = []
-  for(let i = 0; i < words.length; i++){
+// var isAcronym = function(words, s) {
+//   let res = []
+//   for(let i = 0; i < words.length; i++){
 
+//       res.push(words[i][0])
+//   }
+//   return res.join('') == s
+// };
+// console.log(isAcronym(["alice","bob","charlie"] , "abc"));
 
-      res.push(words[i][0])
+var splitWordsBySeparator = function (words, separator) {
+  let arr = new Array();
+  console.log(arr);
+  for (let i = 0; i < words.length; i++) {
+    arr.push(...words[i].split(separator));
   }
-  return res.join('') == s
+  let res = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== "") {
+      res.push(arr[i]);
+    }
+  }
+  return res;
 };
-console.log(isAcronym(["alice","bob","charlie"] , "abc"));
+console.log(splitWordsBySeparator(["|||"], "|"));
